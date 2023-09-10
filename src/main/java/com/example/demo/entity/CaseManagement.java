@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.entity.enums.CaseOutcome;
 import com.example.demo.entity.enums.CasePriority;
 import com.example.demo.entity.enums.CaseStatus;
 import com.example.demo.entity.enums.CaseType;
@@ -55,6 +56,13 @@ public class CaseManagement {
     @OneToMany(mappedBy = "caseManagement")
     private List<Witness> witnesses;
 
+    @Enumerated(EnumType.STRING)
+    private CaseOutcome caseOutcome;
+
+    @Column(columnDefinition = "TEXT")
+    private String caseNote;
+
+
 }
 
 
@@ -88,6 +96,5 @@ public class CaseManagement {
 //    private Judges assignedJudges;
 ////    List <Long> relatedCasesId;
 //    List<CaseHistory> caseHistory;
-//      private String caseOutcome
 //
 //}
