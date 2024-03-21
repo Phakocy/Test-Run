@@ -11,6 +11,9 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 
+
+//Remember to add the Javamail configuration in the app properties,  or use the mail config class
+
 @Service
 @AllArgsConstructor
 public class EmailSenderServiceImpl {
